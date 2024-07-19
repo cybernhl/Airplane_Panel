@@ -1,17 +1,49 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        google()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
         mavenCentral()
+        google{
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+            mavenContent{
+                includeGroupAndSubgroups("androidx")
+                includeGroupAndSubgroups("com.android")
+                includeGroupAndSubgroups("com.google")
+            }
+        }
+        maven {
+            url "https://maven.pkg.jetbrains.space/public/p/compose/dev"
+        }
+        jcenter()
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
         mavenCentral()
-        mavenLocal()
+        google {
+            mavenContent{
+                includeGroupAndSubgroups("androidx")
+                includeGroupAndSubgroups("com.android")
+                includeGroupAndSubgroups("com.google")
+            }
+        }
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
         maven { url 'https://jitpack.io' }
+        gradlePluginPortal()
+        maven {
+            url "https://maven.pkg.jetbrains.space/public/p/compose/dev"
+        }
+        jcenter()
+        mavenLocal()
     }
 }
 rootProject.name = "Airplane_Panel"

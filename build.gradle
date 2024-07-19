@@ -1,5 +1,47 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+import org.gradle.util.internal.VersionNumber
+
+buildscript {
+    ext {
+        //Ref : https://developer.android.com/build/releases/past-releases
+        agp_gradle = libs.versions.agp.version.get()
+        kotlin_version =libs.versions.kotlin.version.get() 
+        room_version = "2.6.6"
+
+        compileSdkVersion = 34
+        compileSdk = compileSdkVersion
+        targetSdkVersion = compileSdk
+        targetSdk = targetSdkVersion
+        minSdkVersion = 21
+        minSdk = minSdkVersion
+    }
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        google()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            url = uri('https://maven.pkg.jetbrains.space/public/p/compose/dev')
+        }
+    }
+    dependencies {
+
+    }
+}
+
 plugins {
-    id 'com.android.application' version '8.2.2' apply false
-    id 'com.android.library' version '8.2.2' apply false
+    alias(libs.plugins.android.application) apply false
+    id "com.android.library" version "${agp_gradle}" apply false
+}
+
+allprojects {
+    //https://www.baeldung.com/java-comparing-versions
+    println "Show  current define room version  : ${room_version}"
+    def room_version = VersionNumber.parse(room_version)
+    def target_room_version = VersionNumber.parse("2.4.0-alpha03")
+    println "Show  current define room ver  : ${room_version.minor}"
+    println "Show  target_room_version  : ${target_room_version.minor}"
+    println "Show  compareTo  : ${room_version.compareTo(target_room_version)}"
 }
