@@ -14,7 +14,7 @@ fragment_version = "1.6.2"
 cardview_version = "1.0.0"
 material_version = "1.12.0"
 constraintlayout_version = "2.1.4"
-lifecycle_version = "2.8.0-rc03"#2.7.0
+lifecycle_version = "2.7.0"#2.7.0
 lifecycleLivedataKtx = "2.7.0"
 lifecycleViewmodelKtx = "2.7.0"
 lifecycleRuntimeKtx = "2.7.0"
@@ -76,12 +76,8 @@ kamelImage = "0.9.0"
 glide = "4.16.0"
 #endregion
 
-#region I18N and L10N
-lyricist_version = "1.6.2"
-skeptick_libres_version = "1.2.2"
-#endregion
-
 #region Log
+timber = "5.0.1"
 napier_version = "2.6.1"
 #endregion
 
@@ -259,13 +255,6 @@ glide-compiler= { group = "com.github.bumptech.glide", name = "compiler", versio
 glide-ksp = { group = "com.github.bumptech.glide", name = "ksp", version.ref = "glide" }
 #endregion
 
-#region i18n_String  ##TODO compose 1.6.0 will new support i18n
-lyricist = { module = "cafe.adriel.lyricist:lyricist", version.ref = "lyricist_version" }
-lyricist-processor = { module = "cafe.adriel.lyricist:lyricist-processor", version.ref = "lyricist_version" }
-lyricist-processorXml = { module = "cafe.adriel.lyricist:lyricist-processor-xml", version.ref = "lyricist_version" }
-
-i18n_skeptick_libres = { module = "io.github.skeptick.libres:libres-compose", version.ref  = "skeptick_libres_version" }
-#endregion
 
 #region DB
 realm_kotlin_base= { group = "io.realm.kotlin", name = "library-base", version.ref = "realm_kotlin_version" }
@@ -280,6 +269,7 @@ sqlDelight-driver-sqlite = { module = "app.cash.sqldelight:sqlite-driver", versi
 
 #region Log
 log = { module = "io.github.aakira:napier", version.ref = "napier_version" }
+timber= { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 #endregion
 compose-webview-multiplatform = { module = "io.github.kevinnzou:compose-webview-multiplatform", version.ref = "composeWebviewMultiplatform" }
 richeditor-compose = { module = "com.mohamedrejeb.richeditor:richeditor-compose", version.ref = "richeditorCompose" }
@@ -296,6 +286,7 @@ kmpio = { module = "io.github.skolson:kmp-io", version.ref = "kmp_io_version" }
 #endregion
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin_version" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-test-runner = { group = "'androidx.test'", name = "runner", version.ref = "test_runner_version" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
