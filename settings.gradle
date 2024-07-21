@@ -47,4 +47,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Airplane_Panel"
+include ':library'
+project(":library").projectDir = file("./library/common")
 include ':app'
