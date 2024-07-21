@@ -1,25 +1,3 @@
 <resources>
     <string name="app_name">Airplane_Panel</string>
-
-    <string name="agree">Agree</string>
-    <string name="cancel">Cancel</string>
-    <string name="disagree">Disagree</string>
-    <string name="download">Download</string>
-    <string name="download_music">Download music</string>
-    <string name="found_new_song">Fond new song</string>
-    <string name="found_new_video">Fond new video</string>
-    <string name="need_permission_to_access_music">Need permission to access music.</string>
-    <string name="need_permission_to_access_video">Need permission to access video.</string>
-    <string name="no_song_found">No song found</string>
-    <string name="permission_requirement">Permission requirement</string>
-    <string name="search_song">Search song</string>
-    <string name="search_video">Search video</string>
-    <string name="unknown">\u003c unknown \u003e</string>
-    <string name="unsupported_format">Unsupported format</string>
-    <string name="press_again_to_exit">Press again to exit</string>
-    <string name="cant_open_browser">Can\'t open browser.</string>
-
-    <declare-styleable name="PlayPauseState">
-        <attr name="state_pause" format="boolean" />
-    </declare-styleable>
 </resources>
